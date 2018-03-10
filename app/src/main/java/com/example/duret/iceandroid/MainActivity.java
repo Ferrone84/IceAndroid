@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import server.IServerPrx;
+
 public class MainActivity extends AppCompatActivity {
     private Button bonsouar;
     private TextView hw;
@@ -14,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        IServerPrx ice = SharedIce.getInstance();
+        System.out.println(ice.getPlaylist());
 
         bonsouar = findViewById(R.id.bonsouar);
         hw = findViewById(R.id.hw);
