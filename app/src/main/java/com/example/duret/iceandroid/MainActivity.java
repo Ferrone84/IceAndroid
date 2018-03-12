@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         IServerPrx ice = SharedIce.getInstance();
-        System.out.println(ice.getPlaylist());
+        //System.out.println(ice.getPlaylist());
+
 
         bonsouar = findViewById(R.id.bonsouar);
         hw = findViewById(R.id.hw);
